@@ -1,0 +1,205 @@
+{
+    "bio": {
+        "name": "Joseph Satriani (Satch)",
+        "gender": "male",
+        "birth": {
+            "date": "July 15, 1956",
+            "city": "New York"
+        },
+        "nationality": "American"
+    },
+    "contacts": {
+        "email": "joe.satriani@gmail.com",
+        "phone": "+1 987654321",
+        "messaging": {
+            "whatsapp": {
+                "url": "https://wa.me/1987654321",
+                "label": "+1987654321"
+            },
+            "telegram": {
+                "url": "https://t.me/joe.satriani",
+                "label": "joe.satriani"
+            }
+        },
+        "address": {
+            "city": "New York",
+            "timezone": "America/New York",
+            "utc_offset": "-4",
+            "country": "USA"
+        }
+    },
+    "social_links": {
+        "website": {
+            "url": "https://satriani.com",
+            "label": "satriani.com"
+        },
+        "blog": {
+            "url": "https://blog.satriani.com",
+            "label": "blog.satriani.com"
+        },
+        "linkedin": {
+            "url": "https://linkedin.com/in/satch",
+            "label": "linkedin.com/in/satch"
+        },
+        "github": {
+            "url": "https://github.com/joe.satriani",
+            "label": "github.com/joe.satriani"
+        },
+        "twitter": {
+            "url": "https://twitter.com/joe.satriani",
+            "label": "@joe.satriani"
+        }
+    },
+    "education": [
+        {
+            "level": "Degree",
+            "major": "Music",
+            "subject": "Computational Musics",
+            "institution": "Musica Universalis University",
+            "start": "1975",
+            "end": "1980",
+            "grade": 3.99,
+            "max_grade": 4
+        }
+    ],
+    "summary": "45 Years of total professional experience; 25+ years of various musical instruments; 35+ years working with world's top musicians; 20 years known as one of the best rock guitarist ever",
+    "skills": [
+        {
+            "type": "Programming",
+            "language": "Go",
+            "since": 2017,
+            "year_experience": 6,
+            "confidence_level": 9
+        }
+    ],
+    "qualification": [
+        "A world-renowned guitarist, songwriter, and educator. Released over 15 studio albums and has won numerous awards, including a Grammy Award for Best Rock Instrumental Performance. Known for his technical skill and his ability to blend rock, blues, and jazz influences. He has influenced many other guitarists, including Kirk Hammett of Metallica and Steve Vai.        ",
+        "Playing guitar at the age of 14. Studied with jazz guitarists Billy Bauer and Lennie Tristano. Taught guitar for 10 years, with students including Kirk Hammett and David Bryson of Counting Crows. In 1987, Released his debut album, \"Not of This Earth.\" The album was a critical and commercial success, and it helped to establish a major force in the world of guitar.",
+        "Has continued to release successful albums throughout his career. Has also toured extensively, both as a solo artist and as a member of the G3 guitar tour, which also features Steve Vai and John Petrucci. A true guitar master, and his music continues to inspire and amaze audiences around the world."
+    ],
+    "career_objective": [
+        "Push the boundaries of instrumental music, captivating audiences with his unique guitar artistry while constantly evolving his playing techniques and compositions. Through his virtuosic performances and innovative soundscapes, he aims to inspire fellow musicians and music enthusiasts alike, fostering a legacy that celebrates creativity, technical excellence, and a relentless pursuit of musical exploration."
+    ],
+    "personal_research": [
+        "Advancing the understanding of music theory, exploring new sonic possibilities, and innovating guitar techniques. Through rigorous experimentation and collaboration with fellow musicians, he would seek to uncover fresh ways of expressing emotions through sound, bridging the gap between theory and practical application to shape the future of instrumental music and inspire a new generation of guitarists."
+    ],
+    "experience": [
+        {
+            "start": "1996-06",
+            "end": "",
+            "employment_type": "Freelance",
+            "work_environment": "Studio, World Tour",
+            "company": "G3 Guitarist Band",
+            "company_url": "https://www.joesatrianiuniverse.com/g3/",
+            "company_description": "G3 is a musical project and band that features a rotating lineup of world-class guitarists, each known for their virtuosity and contributions to the realm of rock and instrumental music. The primary focus of G3 is to bring together these accomplished guitarists for collaborative live performances and recordings.",
+            "positions": ["Guitarist"],
+            "report_to": "The Band",
+            "team": [],
+            "technologies": [
+                "Various Guitars",
+                "Amps",
+                "Effects",
+                "DAW",
+                "Live Sound Systems"
+            ],
+            "standards": [
+                {
+                    "name": "IAML",
+                    "url": "https://www.iaml.info/"
+                },
+                {
+                    "name": "ISMN",
+                    "url": "https://www.ismn-international.org/"
+                }
+            ],
+            "responsibilities": [
+                "Contribute to shaping the artistic direction of G3 concerts, helping to curate the setlist, musical arrangements, and overall flow of the performances. ",
+                "Delivering standout solos and leading collaborative jams.",
+                "Actively engage in musical collaborations with the other guitarists in the lineup."
+            ],
+            "accomplishments": [
+                "Revolutionized the way guitar virtuosos collaborate and showcase their talents.",
+                "cultivated a global community of guitar aficionados, fostering a space where musicians and fans alike can come together to celebrate the art of guitar playing.",
+                "Shaping the G3 project into an iconic platform for celebrating guitar virtuosity and creativity."
+            ],
+            "achievements": [
+                "Inducted into the Guitar Center RockWalk in 2005.",
+                "Ranked 11th on Rolling Stone magazine's list of the 100 Greatest Guitarists of All Time.",
+                "Awarded the Lifetime Achievement Award at the NAMM TEC Awards in 2019."
+            ]
+        },
+        {
+            "start": "1986-02",
+            "end": "1995-06",
+            "employment_type": "full-time",
+            "work_environment": "Studio",
+            "company": "Solo Artist",
+            "company_url": "https://www.joesatrianiuniverse.com/",
+            "company_description": "Joe Satriani is a world-renowned guitar solo artist who has released over 15 studio albums. He is known for his technical skill and his ability to blend rock, blues, and jazz influences. He has influenced many other guitarists, including Kirk Hammett of Metallica and Steve Vai.",
+            "positions": ["Guitarist", "Composer"],
+            "report_to": "self",
+            "team": ["6 Person", "Third Party"],
+            "technologies": [
+                "Various Guitar",
+                "Amps",
+                "Effects",
+                "Synthesizers",
+                "Sound System"
+            ],
+            "standards": [
+                {
+                    "name": "ISMN",
+                    "url": "https://www.ismn-international.org/"
+                }
+            ],
+            "responsibilities": [
+                "Write and compose all of his own music. This included coming up with the melodies, lyrics, and arrangements.",
+                "Perform the music live. Including rehearsing the songs, setting up the equipment, and playing the shows.",
+                "Promote the music to the public. Including giving interviews, making appearances, and releasing music videos."
+            ],
+            "accomplishments": [
+                "Has released over 15 studio albums, all of which have been critically acclaimed.",
+                "Has won numerous awards, including a Grammy Award for Best Rock Instrumental Performance.",
+                "Has written several guitar instruction books, including \"Guitar Secrets\" and \"Surfing with the Alien.\""
+            ],
+            "achievements": [
+                "Considered one of the greatest guitarists of all time",
+                "Graduated other genius guitarists like Kirk Hammet, John Petrucci and Steve Vai.",
+                "Album \"Surfing with the Alien\", which was released in 1987 and has sold over 4 million copies."
+            ]
+        }
+    ],
+    "personal_showcase": {
+        "labs": [
+            {"type": "NameValues", "name": "Guitars", "value": ["Ibanez", "Fender", "PRS", "Jackson"]},
+            {"type": "NameValues", "name": "Effects", "value": ["Ibanez TS808 Tube Screamer", "MXR Phase 90", "Electro-Harmonix Big Muff Pi"]},
+            {"type": "NameValues", "name": "DAWs", "value": ["Pro Tools"]},
+            {"type": "NameValues", "name": "Amps", "value": ["Marshall JVM410H"]},
+            {"type": "NameValues", "name": "Sound Systems", "value": [" Clair Brothers L-Acoustics"]}
+        ],
+        "learning": [
+            {"type": "NameObjects", "name": "Satriani School", "value": [
+                {"type": "NameValues", "name": "Basic Music", "value": ["Self Paced"]},
+                {"type": "NameValues", "name": "Music Theory", "value": ["Self Paced"]},
+                {"type": "NameValues", "name": "Improvisation", "value": ["Self Paced"]}
+            ]},
+            {"type": "NameObjects", "name": "In person", "value": [
+                {"type": "NameValues", "name": "The Guitar Workshop", "value": ["Advanced"]},
+                {"type": "NameValues", "name": "The Guitar Master Class", "value": ["Specialization"]}
+            ]}
+        ],
+        "projects": [
+            {"type": "NameObjects", "name": "Europe Tour", "value": [
+                {"type": "NameValues", "name": "Barba Negra Music Hall, Budapest, Hungary", "value": ["June 12, 2023"]},
+                {"type": "NameValues", "name": "Grugahalle, Essen, Germany", "value": ["June 14, 2023"]},
+                {"type": "NameValues", "name": "Jahrhunderthalle, Frankfurt, Germany", "value": ["June 15, 2023"]},
+                {"type": "NameValues", "name": "Rockhal, Esch-sur-Alzette, Luxembourg", "value": ["June 16, 2023"]}
+            ]},
+            {"type": "NameObjects", "name": "Asia Tour", "value": [
+                {"type": "NameValues", "name": "Esplanade – Theatres on the Bay, Singapore", "value": ["July 27, 2023"]},
+                {"type": "NameValues", "name": "Blue Note Jazz Festival, Tokyo, Japan", "value": ["July 29, 2023"]},
+                {"type": "NameValues", "name": "Blue Note Jazz Festival, Osaka, Japan", "value": ["July 30, 2023"]}
+            ]}
+        ]
+    }
+}

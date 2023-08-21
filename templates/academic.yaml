@@ -1,0 +1,225 @@
+opening: |
+  \documentclass[12pt]{../templates/classes/res} 
+  \usepackage{helvet} 
+  \usepackage{multicol}
+  \usepackage{hyperref}
+  \usepackage{soul}
+  \usepackage{xcolor}
+
+  \setlength{\columnsep}{1.5em}
+  \newsectionwidth{0pt}
+  \hypersetup{
+    colorlinks = true, 
+    urlcolor   = blue, 
+    linkcolor  = green,
+    citecolor  = blue 
+  }
+  \pagestyle{plain}
+  \begin{document}
+
+closing: |
+  \end{resume} 
+  \end{document}
+
+header: |
+  \begin{center}
+    {\large{\bf{\textsc{$name}}}}\\
+    \vspace{16pt}
+      \emph{$gender}\\
+    \emph{Birth}: $dob\\
+      \emph{Nationality}: $nationality
+  \end{center}
+
+  \begin{resume}
+  \vspace{-10pt}
+
+contacts: |
+  \begin{minipage}[t]{0.45\linewidth}
+    \section{\centerline{contacts}}
+    {\small 
+      \emph{email} \hfill \href{mailto:$email}{$email}\\
+      \emph{phone} \hfill $phone\\
+      \emph{whatsapp} \hfill \href{$wa_url}{$wa_label}\\
+      \emph{telegram} \hfill \href{$telegram_url}{$telegram_label}\\
+      \emph{location} \hfill $address_city (UTC $address_utc), $address_country\\}
+  \end{minipage}%
+  \hfill
+
+social_links: |
+  \begin{minipage}[t]{0.45\linewidth}
+    \section{\centerline{social links}}
+    {\small 
+      \emph{website} \hfill \href{$website_url}{$website_label}\\
+      \emph{blog} \hfill \href{$blog_url}{$blog_label}\\
+      \emph{linkedIn} \hfill \href{$linkedin_url}{$linkedin_label}\\
+      \emph{twitter} \hfill \href{$twitter_url}{$twitter_label}\\
+      \emph{github} \hfill \href{$github_url}{$github_label}\\}
+  \end{minipage}
+
+educations: |
+  \vspace{-20pt}
+  \begin{center}
+    \rule{1.0\textwidth}{0.1pt}
+  \end{center}
+
+  \section{\centerline{education}}
+  \vspace{-10pt} % Gap between title and text
+  \begin{center}
+    $level in \emph{$major} ($end)\\
+      $institution\\
+      Majoring in \emph{$subject}
+  \end{center}
+
+summary: |
+  \vspace{-30pt}
+  \begin{center}
+    \rule{0.5\textwidth}{0.1pt}
+  \end{center}
+
+  \begin{quotation}
+    {\large 
+    \emph{$summary}};
+  \end{quotation}
+
+  \vspace{-25pt}
+  \begin{center}
+    \rule{0.5\textwidth}{0.1pt}
+  \end{center}
+
+qualification: |
+  \section{\centerline{QUALIFICATION}}
+  \vspace{10pt}
+  \begin{multicols}{2}
+  $paragraphs
+  \end{multicols}
+
+career_objective: |
+  \begin{minipage}[t]{0.48\linewidth}
+    \section{\centerline{CAREER OBJECTIVE}}
+    \vspace{10pt}
+      $objective
+  \end{minipage}%
+  \hfill
+
+personal_research: |
+  \begin{minipage}[t]{0.48\linewidth}
+    \section{\centerline{PERSONAL RESEARCHES}}
+    \vspace{10pt}
+      $research
+  \end{minipage}
+
+  \rule{1.0\textwidth}{0.1pt}
+
+experience_title: |
+  \section{\centerline{PROFESSIONAL EXPERIENCE}} 
+
+experience_item: |
+  \begin{multicols}{2}
+    {\large {\bf \href{$company_url}{$company}}} \\
+    {\footnotesize{\sl $start--$end} \hfill ($duration)}\\
+    {\footnotesize{\sl position} \hfill \bf{$position}}\\
+    {\footnotesize{\sl reports to} \hfill $reports_to}\\
+    {\footnotesize{\sl team} \hfill $teams}\\
+
+    \columnbreak
+    {\footnotesize{$company_description}}\\
+  \end{multicols}
+  \vspace{-20pt}
+
+  \begin{multicols}{2}
+    \section{\leftline{Responsibilities}}
+      \begin{itemize}
+        $responsibilities
+      \end{itemize}
+    \section{\leftline{Accomplishments}}
+      \begin{itemize}
+        \setlength{\itemindent}{0pt}
+        $accomplishments
+      \end{itemize}
+  \end{multicols}
+
+  \vspace{-20pt}
+  \begin{minipage}[t]{0.55\linewidth}
+    \rule{0.25\textwidth}{2pt}
+    \begin{multicols}{2}
+      \section{Technology Stack}
+      \raggedleft{{\footnotesize{$techstack}}}
+      \columnbreak
+      \section{\rightline{Standards}}
+      \raggedleft{{\footnotesize{$standards}}}
+    \end{multicols}
+    \vspace{1pt}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.42\linewidth}
+    \vspace{18pt}
+    \section{Achievement}
+    \begin{flushleft}
+          \footnotesize{$achievements}
+    \end{flushleft}
+  \end{minipage}
+
+  \vspace{10pt}
+  \rule{1.0\textwidth}{0.1pt}
+
+personal_showcase: |
+  \section{\centerline{PERSONAL SHOWCASE}}
+  \vspace{18pt}
+
+personal_showcase_labs_begin: |
+  \begin{minipage}[t]{0.2\linewidth}
+    \section{labs}
+    \vspace{10pt}
+    \footnotesize{
+
+personal_showcase_labs_end: |
+  }
+  \end{minipage}
+  \hfill
+
+personal_showcase_learning_begin: |
+  \begin{minipage}[t]{0.35\linewidth}
+    \section{current learning}
+    \vspace{10pt}
+    \footnotesize{		
+
+personal_showcase_learning_end: |
+  }
+  \end{minipage}
+  \hfill
+
+personal_showcase_projects_begin: |
+  \begin{minipage}[t]{0.35\linewidth}
+    \section{current projects}
+    \vspace{10pt}
+    \footnotesize{
+
+personal_showcase_projects_end: |
+  }
+  \end{minipage}
+
+name_values: |
+      \begin{minipage}[t]{1.0\linewidth}
+        \vspace{1pt}
+        \raggedright{\emph{$name}}
+      \end{minipage}
+      \begin{minipage}[t]{1.0\linewidth}
+        \vspace{2pt}
+        \raggedleft{$values_str}
+        \vspace{5pt}
+      \end{minipage}
+
+name_objects: |
+      \begin{minipage}[t]{1.0\linewidth}
+        \vspace{1pt}
+        \raggedright{\emph{$name}}
+      \end{minipage}
+      \begin{minipage}[t]{1.0\linewidth}
+        \begin{flushleft}
+        \vspace{2pt}
+          \begin{itemize}
+            $objects
+          \end{itemize}
+        \end{flushleft}
+        \vspace{-8pt}
+      \end{minipage}
