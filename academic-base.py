@@ -34,7 +34,7 @@ def render(template_file, resume_file, outname, outfmt="pdf"):
 
     src = render_opening(template_data)
     # ---------------------------
-    src += render_header(template_data, resume_data["bio"])
+    src += render_header(template_data, resume_data["personal"])
     src += render_contacts(template_data, resume_data["contacts"])
     src += render_sosial_links(template_data, resume_data["social_links"])
     src += render_education(template_data, resume_data["education"])
@@ -61,6 +61,7 @@ def render_closing(template):
     return template["closing"]
 
 def render_header(template, data):
+    section_title = data["section_title"]
     gender = "Prefer not to tell gender"
     match data["gender"]:
         case "male": gender = "He/Him"
@@ -71,9 +72,11 @@ def render_header(template, data):
     dob = data["birth"]["date"]
     nationality = data["nationality"]
     code_tpl = Template(code)
-    return code_tpl.substitute(name=name, gender=gender, dob=dob, nationality=nationality)
+    return code_tpl.substitute(section_title=section_title, 
+                               name=name, gender=gender, dob=dob, nationality=nationality)
 
 def render_contacts(template, data):
+    section_title = data["section_title"]
     code = template["contacts"]
     email = data["email"]
     phone = data["phone"]
@@ -85,11 +88,13 @@ def render_contacts(template, data):
     address_utc = data["address"]["utc_offset"]
     address_country = data["address"]["country"]
     code_tpl = Template(code)
-    return code_tpl.substitute(email=email, phone=phone, wa_url=wa_url, wa_label=wa_label, 
-                             telegram_url=telegram_url, telegram_label=telegram_label, 
-                             address_city=address_city, address_utc=address_utc, address_country=address_country)
+    return code_tpl.substitute(section_title=section_title, 
+                               email=email, phone=phone, wa_url=wa_url, wa_label=wa_label, 
+                               telegram_url=telegram_url, telegram_label=telegram_label, 
+                               address_city=address_city, address_utc=address_utc, address_country=address_country)
 
 def render_sosial_links(template, data):
+    section_title = data["section_title"]
     code = template["social_links"]
     website = data["website"]
     blog = data["blog"]
@@ -97,15 +102,17 @@ def render_sosial_links(template, data):
     twitter = data["twitter"]
     github = data["github"]
     code_tpl = Template(code)
-    return code_tpl.substitute(website_url=website["url"], website_label=website["label"],
-                             blog_url=blog["url"], blog_label=blog["label"],
-                             linkedin_url=linkedin["url"], linkedin_label=linkedin["label"],
-                             twitter_url=twitter["url"], twitter_label=twitter["label"],
-                             github_url=github["url"], github_label=github["label"])
+    return code_tpl.substitute(section_title=section_title, 
+                               website_url=website["url"], website_label=website["label"],
+                               blog_url=blog["url"], blog_label=blog["label"],
+                               linkedin_url=linkedin["url"], linkedin_label=linkedin["label"],
+                               twitter_url=twitter["url"], twitter_label=twitter["label"],
+                               github_url=github["url"], github_label=github["label"])
 
 def render_education(template, data):
     # TODO: need support for multiple education items
-    edu = data[0]
+    section_title = data["section_title"]
+    edu = data["items"][0]
     code = template["educations"]
     level = edu["level"]
     major = edu["major"]
@@ -113,36 +120,50 @@ def render_education(template, data):
     end = edu["end"]
     institution = edu["institution"]
     code_tpl = Template(code)
-    return code_tpl.substitute(level=level, major=major, subject=subject, end=end, institution=institution)
+    return code_tpl.substitute(section_title=section_title, 
+                               level=level, major=major, subject=subject, end=end, institution=institution)
 
 def render_summary(template, data):
+    section_title = data["section_title"]
+    text = data["text"]
     code = template["summary"]
     code_tpl = Template(code)
-    return code_tpl.substitute(summary=data)
+    return code_tpl.substitute(section_title=section_title, summary=text)
 
 def render_qualification(template, data):
+    section_title = data["section_title"]
     code = template["qualification"]
     paragraphs = ""
-    for paragraph in data:
+    for paragraph in data["texts"]:
         paragraphs += paragraph + "\n\n"
     code_tpl = Template(code)
-    return code_tpl.substitute(paragraphs=paragraphs)
+    return code_tpl.substitute(section_title=section_title, paragraphs=paragraphs)
 
 def render_career_objective(template, data):
+    section_title = data["section_title"]
     code = template["career_objective"]
+    paragraphs = ""
+    for paragraph in data["texts"]:
+        paragraphs += paragraph + "\n\n"
     code_tpl = Template(code)
-    return code_tpl.substitute(objective=data[0])
+    return code_tpl.substitute(section_title=section_title, objective=paragraphs)
 
 def render_personal_research(template, data):
+    section_title = data["section_title"]
     code = template["personal_research"]
+    paragraphs = ""
+    for paragraph in data["texts"]:
+        paragraphs += paragraph + "\n\n"
     code_tpl = Template(code)
-    return code_tpl.substitute(research=data[0])
+    return code_tpl.substitute(section_title=section_title, research=paragraphs)
 
 def render_experiences(template, data):
+    section_title = data["section_title"]
     code = template["experience_title"]
-    for exp in data:
+    for exp in data["items"]:
         code += render_experience(template, exp)
-    return code
+    code_tpl = Template(code)
+    return code_tpl.substitute(section_title=section_title)
 
 def render_experience(template, exp):
     item_str = "\item "
@@ -174,56 +195,29 @@ def render_experience(template, exp):
                             techstack=techstack, standards=standards, achievements=achievements)
 
 def render_personal_showcase(template, data):
+    section_title = data["section_title"]
     src = template["personal_showcase"]
     rule_str = '\\rule{1.0\\textwidth}{0.1pt}\n'
-    # render labs
-    src += render_personal_showcase_labs_begin(template)
-    i = 0
-    for item in data["labs"]:
-        src += render_personal_showcase_item(template, item)
-        if i < len(data["labs"]) - 1:
-            src += rule_str
-        i+= 1
-    src += render_personal_showcase_labs_end(template)
-    
-    # render learnings
-    src += render_personal_showcase_learnings_begin(template)
-    i = 0
-    for item in data["learning"]:
-        src += render_personal_showcase_item(template, item)
-        if i < len(data["learning"]) - 1:
-            src += rule_str
-        i+= 1
-    src += render_personal_showcase_learnings_end(template)
-    
-    # render projects
-    src += render_personal_showcase_projects_begin(template)
-    i = 0
-    for item in data["projects"]:
-        src += render_personal_showcase_item(template, item)
-        if i < len(data["projects"]) - 1:
-            src += rule_str
-        i+= 1
-    src += render_personal_showcase_projects_end(template)
+    src = Template(src).substitute(section_title=section_title)
+
+    widths = [0.2, 0.35, 0.35] # width proportion to total line-width
+    for index, group in enumerate(data["groups"]):
+        src += render_personal_showcase_group_begin(widths[index], template, group["subsection_title"])
+        i = 0
+        for item in group["items"]:
+            src += render_personal_showcase_item(template, item)
+            if i < len(group["items"]) - 1:
+                src += rule_str
+            i+= 1
+        src += render_personal_showcase_group_end(template)
     return src
 
-def render_personal_showcase_labs_begin(template):
-    return template["personal_showcase_labs_begin"]
+def render_personal_showcase_group_begin(width, template, title):
+    code_tpl = Template(template["personal_showcase_group_begin"])
+    return code_tpl.substitute(width=width, subsection_title=title)
 
-def render_personal_showcase_labs_end(template):
-    return template["personal_showcase_labs_end"]
-
-def render_personal_showcase_learnings_begin(template):
-    return template["personal_showcase_learning_begin"]
-
-def render_personal_showcase_learnings_end(template):
-    return template["personal_showcase_learning_end"]
-
-def render_personal_showcase_projects_begin(template):
-    return template["personal_showcase_projects_begin"]
-
-def render_personal_showcase_projects_end(template):
-    return template["personal_showcase_projects_end"]
+def render_personal_showcase_group_end(template):
+    return template["personal_showcase_group_end"]
 
 def render_personal_showcase_item(template, data):
     match data["type"]:
@@ -253,7 +247,7 @@ def main(argv):
     tplfile = "academic.yaml"
     outname = "output-resume"
     resumedata = ""
-    opts, args = getopt.getopt(argv, "ht:r:o:", ["template", "resume-data", "outname"])
+    opts, _ = getopt.getopt(argv, "ht:r:o:", ["template", "resume-data", "outname"])
     for opt, arg in opts:
         if opt == "-h":
             print(sys.argv[0] + " -t <template-name> -r <resume-data> -o <outname>")

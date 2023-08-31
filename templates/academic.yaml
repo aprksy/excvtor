@@ -35,7 +35,7 @@ header: |
 
 contacts: |
   \begin{minipage}[t]{0.45\linewidth}
-    \section{\centerline{contacts}}
+    \section{\centerline{$section_title}}
     {\small 
       \emph{email} \hfill \href{mailto:$email}{$email}\\
       \emph{phone} \hfill $phone\\
@@ -47,7 +47,7 @@ contacts: |
 
 social_links: |
   \begin{minipage}[t]{0.45\linewidth}
-    \section{\centerline{social links}}
+    \section{\centerline{$section_title}}
     {\small 
       \emph{website} \hfill \href{$website_url}{$website_label}\\
       \emph{blog} \hfill \href{$blog_url}{$blog_label}\\
@@ -62,7 +62,7 @@ educations: |
     \rule{1.0\textwidth}{0.1pt}
   \end{center}
 
-  \section{\centerline{education}}
+  \section{\centerline{$section_title}}
   \vspace{-10pt} % Gap between title and text
   \begin{center}
     $level in \emph{$major} ($end)\\
@@ -87,7 +87,7 @@ summary: |
   \end{center}
 
 qualification: |
-  \section{\centerline{QUALIFICATION}}
+  \section{\centerline{$section_title}}
   \vspace{10pt}
   \begin{multicols}{2}
   $paragraphs
@@ -95,7 +95,7 @@ qualification: |
 
 career_objective: |
   \begin{minipage}[t]{0.48\linewidth}
-    \section{\centerline{CAREER OBJECTIVE}}
+    \section{\centerline{$section_title}}
     \vspace{10pt}
       $objective
   \end{minipage}%
@@ -103,7 +103,7 @@ career_objective: |
 
 personal_research: |
   \begin{minipage}[t]{0.48\linewidth}
-    \section{\centerline{PERSONAL RESEARCHES}}
+    \section{\centerline{$section_title}}
     \vspace{10pt}
       $research
   \end{minipage}
@@ -111,7 +111,7 @@ personal_research: |
   \rule{1.0\textwidth}{0.1pt}
 
 experience_title: |
-  \section{\centerline{PROFESSIONAL EXPERIENCE}} 
+  \section{\centerline{$section_title}} 
 
 experience_item: |
   \begin{multicols}{2}
@@ -163,40 +163,19 @@ experience_item: |
   \rule{1.0\textwidth}{0.1pt}
 
 personal_showcase: |
-  \section{\centerline{PERSONAL SHOWCASE}}
+  \section{\centerline{$section_title}}
   \vspace{18pt}
 
-personal_showcase_labs_begin: |
-  \begin{minipage}[t]{0.2\linewidth}
-    \section{labs}
+personal_showcase_group_begin: |
+  \begin{minipage}[t]{$width\linewidth}
+    \section{$subsection_title}
     \vspace{10pt}
     \footnotesize{
 
-personal_showcase_labs_end: |
+personal_showcase_group_end: |
   }
   \end{minipage}
   \hfill
-
-personal_showcase_learning_begin: |
-  \begin{minipage}[t]{0.35\linewidth}
-    \section{current learning}
-    \vspace{10pt}
-    \footnotesize{		
-
-personal_showcase_learning_end: |
-  }
-  \end{minipage}
-  \hfill
-
-personal_showcase_projects_begin: |
-  \begin{minipage}[t]{0.35\linewidth}
-    \section{current projects}
-    \vspace{10pt}
-    \footnotesize{
-
-personal_showcase_projects_end: |
-  }
-  \end{minipage}
 
 name_values: |
       \begin{minipage}[t]{1.0\linewidth}
