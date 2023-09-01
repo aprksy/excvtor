@@ -6,7 +6,7 @@ This is a really simple python script that read resume data (JSON, yes, you need
 pair them with a template and from the both, produce LaTeX file and then compile it to PDF.
 Here is what it look like:
 
-[![IMAGE]([docs/img/satriani.png)](out/satriani.pdf](https://github.com/aprksy/excvtor/blob/main/docs/img/satriani.png))
+[![IMAGE](https://github.com/aprksy/excvtor/blob/main/docs/img/satriani.png)](https://github.com/aprksy/excvtor/blob/main/out/satriani.pdf)
 
 > **Disclaimer**: The above is not meant to display/distribute Mr. Joe Satriani personal/professional information and subject to be example only. All those information are available on the internet and some of them I just made it up.
 
