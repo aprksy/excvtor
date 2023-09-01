@@ -6,7 +6,7 @@ This is a really simple python script that read resume data (JSON, yes, you need
 pair them with a template and from the both, produce LaTeX file and then compile it to PDF.
 Here is what it look like:
 
-[![IMAGE](docs/img/satriani.png)](out/satriani.pdf)
+[![IMAGE]([docs/img/satriani.png)](out/satriani.pdf](https://github.com/aprksy/excvtor/blob/main/docs/img/satriani.png))
 
 > **Disclaimer**: The above is not meant to display/distribute Mr. Joe Satriani personal/professional information and subject to be example only. All those information are available on the internet and some of them I just made it up.
 
@@ -51,23 +51,15 @@ The above command will:
 5. if everything is okay, output a pdf file `out/satriani.pdf`
 
 ## FAQ
-<details>
-    <summary>It seems the generator scripts is tightly coupled with the template, why?</summary>
-    
-    Yes, it's because between one template to another can be vary a lot. Developing a single generator to accomodate all the templates will make it extremely complicated. And this will violate this project title.
+### It seems the generator scripts is tightly coupled with the template, why?
+> Yes, it's because between one template to another can be vary a lot. Developing a single generator to accomodate all the templates will make it extremely complicated. And this will violate this project title.
+However, a generator script can pick from multiple template files in the same family. Two template files is said to be from a same family if they have same layout and/or same sequence of TeX source code. More on this later.
 
-    However, a generator script can pick from multiple template files in the same family. Two template files is said to be from a same family if they have same layout and/or same sequence of TeX source code. More on this later.
-</details>
-<details>
-    <summary>I tried to compile the generated TeX file using tectonic, and it shown a lot of warning message, what happened?</summary>
-    
-    Correct! That's because I'm not a competent TeX typesetter. I need a lot of help here.
-</details>
-<details>
-    <summary>Why only one template file?</summary>
-    
-    Currently I develop this only for my CV because, I need to look for a new job. I will add some later on. Still looking for some idea.
-</details>
+### I tried to compile the generated TeX file using tectonic, and it shown a lot of warning message, what happened?
+> Correct! That's because I'm not a competent TeX typesetter. I need a lot of help here.
+
+### Why only one template file?
+> Currently I develop this only for my CV because, I need to look for a new job. I will add some later on. Still looking for some idea.
 
 ## Credits
 - Python
