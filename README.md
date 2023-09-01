@@ -69,7 +69,7 @@ The above command will:
     Currently I develop this only for my CV because, I need to look for a new job. I will add some later on. Still looking for some idea.
 </details>
 
-## Creadits
+## Credits
 - Python
 - Tectonic typesettings
 - All the TeX family
