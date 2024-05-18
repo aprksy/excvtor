@@ -1,4 +1,4 @@
-#! env/bin/python 
+#! myenv/bin/python 
 
 import sys, getopt
 import yaml
@@ -166,7 +166,7 @@ def render_experiences(template, data):
     return code_tpl.substitute(section_title=section_title)
 
 def render_experience(template, exp):
-    item_str = "\item "
+    item_str = "\\item "
     code = template["experience_item"]
     company = exp["company"]
     company_url = exp["company_url"]
@@ -180,13 +180,13 @@ def render_experience(template, exp):
     responsibilities = "\n".join([item_str + r for r in exp["responsibilities"]])
     accomplishments = "\n".join([item_str + r for r in exp["accomplishments"]])
     techstack = ", ".join(exp["technologies"])
-    standards = "(none)" if len(exp["standards"]) == 0 else ", ".join(["\href{" + s["url"] + "}{" + s["name"] + "}" for s in exp["standards"]])
+    standards = "(none)" if len(exp["standards"]) == 0 else ", ".join(["\\href{" + s["url"] + "}{" + s["name"] + "}" for s in exp["standards"]])
     achievements = "\\vspace{2.6pt}\n(none specific)"
     if len(exp["achievements"]) == 1:
         achievements = "\\vspace{2.6pt}\n" + exp["achievements"][0]
     elif len(exp["achievements"]) > 1:
         achievements = "\n".join([item_str + r for r in exp["achievements"]])
-        achievements = "\\begin{itemize}\n" + achievements + "\n\end{itemize}"
+        achievements = "\\begin{itemize}\n" + achievements + "\n\\end{itemize}"
     code_tpl = Template(code)
     return code_tpl.substitute(company_url=company_url, company=company, start=start, end=end,
                             duration=duration, position=position, reports_to=reports_to,
@@ -238,7 +238,7 @@ def render_name_objects(template, data):
     values_str = ""
     for item in data["value"]:
         if item["type"] == "NameValues":
-            values_str += render_name_values("\item $name ($values_str)\n", item)
+            values_str += render_name_values("\\item $name ($values_str)\n", item)
     return code_tpl.substitute(name=name, objects=values_str)
 
 # main program
