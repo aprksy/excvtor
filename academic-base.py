@@ -1,4 +1,4 @@
-#! myenv/bin/python 
+#! python 
 
 import sys, getopt
 import yaml
@@ -90,7 +90,7 @@ def render_contacts(template, data):
     code_tpl = Template(code)
     return code_tpl.substitute(section_title=section_title, 
                                email=email, phone=phone, wa_url=wa_url, wa_label=wa_label, 
-                               telegram_url=telegram_url, telegram_label=telegram_label, 
+                            #    telegram_url=telegram_url, telegram_label=telegram_label, 
                                address_city=address_city, address_utc=address_utc, address_country=address_country)
 
 def render_sosial_links(template, data):
@@ -103,10 +103,10 @@ def render_sosial_links(template, data):
     github = data["github"]
     code_tpl = Template(code)
     return code_tpl.substitute(section_title=section_title, 
-                               website_url=website["url"], website_label=website["label"],
+                            #    website_url=website["url"], website_label=website["label"],
                                blog_url=blog["url"], blog_label=blog["label"],
                                linkedin_url=linkedin["url"], linkedin_label=linkedin["label"],
-                               twitter_url=twitter["url"], twitter_label=twitter["label"],
+                            #    twitter_url=twitter["url"], twitter_label=twitter["label"],
                                github_url=github["url"], github_label=github["label"])
 
 def render_education(template, data):

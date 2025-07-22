@@ -40,7 +40,6 @@ contacts: |
       \emph{email} \hfill \href{mailto:$email}{$email}\\
       \emph{phone} \hfill $phone\\
       \emph{whatsapp} \hfill \href{$wa_url}{$wa_label}\\
-      \emph{telegram} \hfill \href{$telegram_url}{$telegram_label}\\
       \emph{location} \hfill $address_city (UTC $address_utc), $address_country\\}
   \end{minipage}%
   \hfill
@@ -49,15 +48,13 @@ social_links: |
   \begin{minipage}[t]{0.45\linewidth}
     \section{\centerline{$section_title}}
     {\small 
-      \emph{website} \hfill \href{$website_url}{$website_label}\\
       \emph{blog} \hfill \href{$blog_url}{$blog_label}\\
       \emph{linkedIn} \hfill \href{$linkedin_url}{$linkedin_label}\\
-      \emph{twitter} \hfill \href{$twitter_url}{$twitter_label}\\
       \emph{github} \hfill \href{$github_url}{$github_label}\\}
   \end{minipage}
 
 educations: |
-  \vspace{-20pt}
+  \vspace{-30pt}
   \begin{center}
     \rule{1.0\textwidth}{0.1pt}
   \end{center}
@@ -111,6 +108,7 @@ personal_research: |
   \rule{1.0\textwidth}{0.1pt}
 
 experience_title: |
+  \pagebreak[0]
   \section{\centerline{$section_title}} 
 
 experience_item: |
@@ -163,6 +161,7 @@ experience_item: |
   \rule{1.0\textwidth}{0.1pt}
 
 personal_showcase: |
+  \pagebreak
   \section{\centerline{$section_title}}
   \vspace{18pt}
 
